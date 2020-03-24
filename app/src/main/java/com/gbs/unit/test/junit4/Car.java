@@ -6,8 +6,12 @@ package com.gbs.unit.test.junit4;
  */
 public class Car {
 
-    public int getSummation(int a,int b){
-        return a + b;
+
+    public String getCarName(String name){
+        return name;
     }
 
+    public boolean isBenz(String type){
+        return "Benz".equals(type);
+    }
 }

@@ -12,16 +12,31 @@ import static org.junit.Assert.*;
  */
 public class CarTest {
 
+    private Car car;
+
     @Before
     public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
+        System.out.println("开始测试啦");
+        car = new Car();
     }
 
     @Test
-    public void getSummation() {
-
+    public void getCarName() {
+        String carName = car.getCarName("奔驰");
+        assertEquals("奔驰",carName);
     }
+
+    @Test
+    public void isBenz() {
+        boolean benz = car.isBenz("大众");
+        assertFalse(benz);
+    }
+
+
+    @After
+    public void tearDown() throws Exception {
+        System.out.println("测试结束");
+    }
+
+
 }
